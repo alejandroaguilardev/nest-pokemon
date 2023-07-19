@@ -15,7 +15,9 @@ export class SeedService {
   ) {}
 
   async executeSeed() {
-    const data = await this.http.get<PokeResponse>(process.env.POKEMON_API);
+    const data = await this.http.get<PokeResponse>(
+      'https://pokeapi.co/api/v2/pokemon?limit=650',
+    );
 
     const seedData: CreatePokemonDto[] = [];
     data.results.forEach(({ name, url }) => {
