@@ -4,6 +4,7 @@
 /mongo
 /.vscode
 .env
+.env.prod
 
 # Logs
 logs

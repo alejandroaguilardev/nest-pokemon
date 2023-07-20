@@ -29,4 +29,15 @@ docker-compose up -d
 
 6. clone ```.env.template``` to ```.env```
 
+# Production Build
+1.  clone ```.env.template``` to ```.env.prod``` and  assign```MONGODB=mongodb://mongo-poke:27017/nest-pokemon``` 
 
+2. Generate Build
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+3. Execute 
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up
+```
